@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="160" viewBox="0 0 900 160">
+<rect width="900" height="160" rx="14" fill="#07140f" stroke="#173c30"/>
+<text x="450" y="72" text-anchor="middle" font-family="monospace" font-size="22" fill="#35f2a3">SNAKE.EXE // WAITING FOR GITHUB ACTIONS</text>
+<text x="450" y="105" text-anchor="middle" font-family="monospace" font-size="13" fill="#6b9185">Run “Update dynamic profile” once to generate the live contribution snake.</text>
+</svg>

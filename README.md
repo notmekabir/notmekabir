@@ -14,7 +14,7 @@
 
 **Original ideas. Thoughtful engineering. Software with purpose.**
 
-[About](#about) &nbsp; / &nbsp; [GitHub Analytics](#github-analytics) &nbsp; / &nbsp; [Languages and Tools](#languages-and-tools) &nbsp; / &nbsp; [Featured Project](#featured-project) &nbsp; / &nbsp; [Principles](#principles)
+[About](#about) &nbsp; / &nbsp; [GitHub Analytics](#github-analytics) &nbsp; / &nbsp; [Languages and Tools](#languages-and-tools) &nbsp; / &nbsp; [Featured Project](#featured-project) &nbsp; / &nbsp; [Snake](#snake) &nbsp; / &nbsp; [Principles](#principles)
 
 </div>
 
@@ -34,19 +34,24 @@ I want to turn ideas into complete products: considered interfaces, dependable b
 
 ### Contribution Activity
 
-<p>
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=notmekabir&bg_color=0b1512&color=6EE7B7&line=35F2A3&point=58D8FF&area=true&hide_border=true&custom_title=Contribution%20Activity" alt="Contribution activity graph for notmekabir" width="100%" />
+<p align="center">
+  <img src="./assets/contribution-activity.svg" alt="Contribution activity graph for notmekabir" width="100%">
 </p>
 
-### Repository & Commit Stats
+### Total Repositories · Stars · Commits
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=notmekabir&show_icons=true&include_all_commits=true&count_private=false&hide_border=true&theme=dark&custom_title=GitHub%20Statistics" alt="GitHub statistics including repositories, stars and commits" width="49%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=notmekabir&hide_border=true&theme=dark&background=0B1512&ring=35F2A3&fire=58D8FF&currStreakLabel=6EE7B7" alt="GitHub contribution streak for notmekabir" width="49%" />
+  <img src="https://github-readme-stats.vercel.app/api?username=notmekabir&show_icons=true&include_all_commits=true&count_private=false&hide_border=true&theme=dark&custom_title=GitHub%20Statistics" alt="GitHub statistics including repositories, stars and commits" width="70%">
 </p>
 
 <p align="center">
-  <sub><b>Total repositories</b>, <b>stars received</b>, commit activity and contribution streak update automatically from GitHub-backed services.</sub>
+  <sub>Repository count, stars received, and commit totals are sourced from GitHub-backed statistics.</sub>
+</p>
+
+### Contribution Streak
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=notmekabir&hide_border=true&theme=dark&background=0B1512&ring=35F2A3&fire=58D8FF&currStreakLabel=6EE7B7" alt="GitHub contribution streak for notmekabir" width="70%">
 </p>
 
 <img src="./assets/circuit-divider.svg" width="100%" alt="" />
@@ -80,13 +85,27 @@ I want to turn ideas into complete products: considered interfaces, dependable b
 
 <p align="center">
   <a href="https://github.com/notmekabir/ExtensionKill">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=notmekabir&repo=ExtensionKill&show_owner=true&hide_border=true&theme=dark" alt="Featured project: ExtensionKill" width="70%" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=notmekabir&repo=ExtensionKill&show_owner=true&hide_border=true&theme=dark" alt="Featured project: ExtensionKill" width="70%">
   </a>
 </p>
 
 **ExtensionKill** is a focused browser utility for instantly disabling and restoring Firefox extensions with one click.
 
 <a href="https://github.com/notmekabir/ExtensionKill"><img src="https://img.shields.io/badge/VIEW_EXTENSIONKILL-07120F?style=for-the-badge&logo=github&logoColor=35F2A3" alt="View ExtensionKill"></a>
+
+<img src="./assets/circuit-divider.svg" width="100%" alt="" />
+
+## Snake
+
+<!-- Snake Game Repo View -->
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/github-snake.svg" />
+    <img src="./assets/github-snake.svg" alt="Snake animation" width="100%" />
+  </picture>
+</div>
 
 <img src="./assets/circuit-divider.svg" width="100%" alt="" />
 
