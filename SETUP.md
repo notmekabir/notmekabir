@@ -15,6 +15,7 @@ The repository must be public.
 - `requirements.txt`
 - `assets/dark_mode.svg`
 - `assets/light_mode.svg`
+- `assets/matrix-portrait.png`
 - `.github/workflows/update-profile.yml`
 
 ## 3. Run the workflow
@@ -34,3 +35,7 @@ GitHub uses the `<picture>` element to select the dark or light SVG based on the
 ## 6. If the SVG does not animate
 
 GitHub and browser rendering can differ for animated SVGs. The profile still has a static fallback appearance, and the dynamic telemetry is updated by the workflow.
+
+## Supplied Matrix portrait
+
+The profile also includes `assets/matrix-portrait.png`, the Matrix-style portrait supplied for this profile. The README displays it directly beneath the dynamic SVG card.
