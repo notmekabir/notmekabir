@@ -1,41 +1,70 @@
-# Cyberpunk GitHub Profile Setup
+# Fully fixed GitHub profile package
 
-## 1. Repository
+## Upload everything at once
 
-Create/use the special GitHub profile repository:
+This package is designed for your special profile repository:
 
-`https://github.com/notmekabir/notmekabir`
+`notmekabir/notmekabir`
 
-The repository must be public.
+Upload **everything inside this folder** to the repository root and commit it to `main`.
 
-## 2. Copy these files
+The README uses only repository-local PNG files:
 
-- `README.md`
-- `update_profile.py`
-- `requirements.txt`
-- `assets/dark_mode.svg`
-- `assets/light_mode.svg`
-- `assets/matrix-portrait.png`
-- `.github/workflows/update-profile.yml`
+```text
+assets/profile-dark.png
+assets/profile-light.png
+```
 
-## 3. Run the workflow
+This deliberately avoids the SVG rendering problem you were seeing.
 
-Open **Actions → Update profile SVG → Run workflow**.
+The supplied Matrix portrait is stored at:
 
-The workflow also runs automatically every day.
+```text
+assets/matrix-portrait.png
+```
 
-## 4. Token
+and is built into the profile card image by `generate_profile.py`.
 
-No personal access token is required. The workflow uses GitHub's built-in `GITHUB_TOKEN`.
+## Required repository structure
 
-## 5. Theme behavior
+```text
+notmekabir/
+├── README.md
+├── MYreadme.md
+├── generate_profile.py
+├── requirements.txt
+├── SETUP.md
+├── assets/
+│   ├── matrix-portrait.png
+│   ├── profile-dark.png
+│   └── profile-light.png
+└── .github/
+    └── workflows/
+        └── update-profile.yml
+```
 
-GitHub uses the `<picture>` element to select the dark or light SVG based on the viewer's color-scheme preference.
+## After upload
 
-## 6. If the SVG does not animate
+1. Open **Actions**.
+2. Select **Update profile card**.
+3. Click **Run workflow**.
+4. Wait for it to finish.
+5. Open your profile and press `Ctrl + F5`.
 
-GitHub and browser rendering can differ for animated SVGs. The profile still has a static fallback appearance, and the dynamic telemetry is updated by the workflow.
+The first upload already contains working PNG cards with placeholder telemetry. The Action replaces the placeholder numbers with live GitHub data.
 
-## Supplied Matrix portrait
+## No personal access token
 
-The profile also includes `assets/matrix-portrait.png`, the Matrix-style portrait supplied for this profile. The README displays it directly beneath the dynamic SVG card.
+The workflow uses GitHub's built-in:
+
+```text
+GITHUB_TOKEN
+```
+
+No PAT is required.
+
+## Important
+
+Do not delete `profile-dark.png` or `profile-light.png` after the first upload. They are the files the README actually displays.
+
+The old `dark_mode.svg` and `light_mode.svg` are intentionally not used anymore.
