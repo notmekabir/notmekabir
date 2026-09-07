@@ -14,11 +14,11 @@
 
 **Original ideas. Thoughtful engineering. Software with purpose.**
 
-[About](#about) &nbsp; / &nbsp; [Direction](#direction) &nbsp; / &nbsp; [Build loop](#build-loop) &nbsp; / &nbsp; [Principles](#principles)
+[About](#about) &nbsp; / &nbsp; [GitHub Analytics](#github-analytics) &nbsp; / &nbsp; [Languages and Tools](#languages-and-tools) &nbsp; / &nbsp; [Featured Project](#featured-project) &nbsp; / &nbsp; [Principles](#principles)
 
 </div>
 
----
+<img src="./assets/circuit-divider.svg" width="100%" alt="" />
 
 ## About
 
@@ -28,81 +28,79 @@ I want to turn ideas into complete products: considered interfaces, dependable b
 
 > **Not reinventing everything. Understanding enough to build something of my own.**
 
-## Direction
+<img src="./assets/circuit-divider.svg" width="100%" alt="" />
 
-<table>
-<tr>
-<td width="50%" valign="top">
+## GitHub Analytics
 
-### 01 — The experience
-**Interfaces that feel intentional.**
+### Contribution Activity
 
-Responsive layouts, accessible interactions, and the details people actually notice.
+<p>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=notmekabir&bg_color=0b1512&color=6EE7B7&line=35F2A3&point=58D8FF&area=true&hide_border=true&custom_title=Contribution%20Activity" alt="Contribution activity graph for notmekabir" width="100%" />
+</p>
 
-</td>
-<td width="50%" valign="top">
+### Repository & Commit Stats
 
-### 02 — The engine
-**Logic that earns trust.**
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=notmekabir&show_icons=true&include_all_commits=true&count_private=false&hide_border=true&theme=dark&custom_title=GitHub%20Statistics" alt="GitHub statistics including repositories, stars and commits" width="49%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=notmekabir&hide_border=true&theme=dark&background=0B1512&ring=35F2A3&fire=58D8FF&currStreakLabel=6EE7B7" alt="GitHub contribution streak for notmekabir" width="49%" />
+</p>
 
-Clear APIs, sensible data models, and behavior that survives beyond the happy path.
+<p align="center">
+  <sub><b>Total repositories</b>, <b>stars received</b>, commit activity and contribution streak update automatically from GitHub-backed services.</sub>
+</p>
 
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+<img src="./assets/circuit-divider.svg" width="100%" alt="" />
 
-### 03 — The whole product
-**Beyond a local demo.**
+## Languages and Tools
 
-Connect the layers, test the behavior, and learn to ship maintainable software end to end.
+<h3 align="left">Languages and Tools:</h3>
+<p align="left">
+  <a href="https://developer.android.com" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg" alt="android" width="40" height="40"/></a>
+  <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/></a>
+  <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/></a>
+  <a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer"><img src="https://cdn.worldvectorlogo.com/logos/django.svg" alt="django" width="40" height="40"/></a>
+  <a href="https://www.docker.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/></a>
+  <a href="https://www.java.com" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/></a>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/></a>
+  <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/></a>
+  <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/></a>
+  <a href="https://nodejs.org" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/></a>
+  <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/></a>
+  <a href="https://www.python.org" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/></a>
+  <a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/></a>
+  <a href="https://reactnative.dev/" target="_blank" rel="noreferrer"><img src="https://reactnative.dev/img/header_logo.svg" alt="reactnative" width="40" height="40"/></a>
+  <a href="https://www.scala-lang.org" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/scala/scala-original.svg" alt="scala" width="40" height="40"/></a>
+  <a href="https://spring.io/" target="_blank" rel="noreferrer"><img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40" height="40"/></a>
+  <a href="https://vuejs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg" alt="vuejs" width="40" height="40"/></a>
+</p>
 
-</td>
-<td width="50%" valign="top">
+<img src="./assets/circuit-divider.svg" width="100%" alt="" />
 
-### 04 — The original solution
-**Fit the tool to the problem.**
+## Featured Project
 
-Build focused software around real needs instead of forcing every idea into a template.
+<p align="center">
+  <a href="https://github.com/notmekabir/ExtensionKill">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=notmekabir&repo=ExtensionKill&show_owner=true&hide_border=true&theme=dark" alt="Featured project: ExtensionKill" width="70%" />
+  </a>
+</p>
 
-</td>
-</tr>
-</table>
+**ExtensionKill** is a focused browser utility for instantly disabling and restoring Firefox extensions with one click.
 
-## Build loop
+<a href="https://github.com/notmekabir/ExtensionKill"><img src="https://img.shields.io/badge/VIEW_EXTENSIONKILL-07120F?style=for-the-badge&logo=github&logoColor=35F2A3" alt="View ExtensionKill"></a>
 
-```text
-DISCOVER  →  BUILD  →  UNDERSTAND  →  REFINE
-problem      prototype   why it works    make it better
-```
-
-## Toolchain
-
-```text
-FRONTEND   HTML · CSS · JavaScript
-BACKEND    Python · APIs · server-side logic
-SYSTEMS    C++ · automation · custom tooling
-WORKFLOW   Git · GitHub · VS Code
-```
-
-## Projects
-
-- Full-stack applications
-- Custom developer utilities
-- Browser tooling and automation
-- Software experiments built through iteration
-
-## Activity
-
-The profile card above is a **real dynamic SVG**.
-
-GitHub Actions runs the generator on a schedule, queries GitHub, and rewrites the numbers inside `dark_mode.svg` and `light_mode.svg`. The SVG also contains CSS-based Matrix animation and the supplied portrait as embedded image data, so the README does not depend on a second remote image request.
+<img src="./assets/circuit-divider.svg" width="100%" alt="" />
 
 ## Principles
 
 > **Build first. Understand deeply. Refine deliberately.**
 
-No cargo-culting. No pretending a tutorial project is a product. No 47-framework architecture for a button that changes color.
+**Think independently.** Start with the problem, not someone else's implementation.
+
+**Learn through making.** Build, break, debug, then explain it in your own words.
+
+**Reuse deliberately.** Use established tools when they fit, not because they're fashionable.
+
+**Keep it focused.** Useful, clear, and maintainable beats complicated for its own sake.
 
 ---
 

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="72" viewBox="0 0 1200 72">
+  <defs>
+    <linearGradient id="fade"><stop stop-color="#34d399" stop-opacity="0"/><stop offset=".5" stop-color="#34d399" stop-opacity=".6"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></linearGradient>
+  </defs>
+  <style>
+    .packet { animation: travel 14s linear infinite; }
+    .core { animation: glow 6s ease-in-out infinite; }
+    @keyframes travel { to { stroke-dashoffset: -1200; } }
+    @keyframes glow { 0%,100% { opacity: .35; } 50% { opacity: .9; } }
+    @media (prefers-reduced-motion: reduce) { .packet, .core { animation: none; } }
+  </style>
+  <path d="M0 36H420L438 18H520L538 36H662L680 54H762L780 36H1200" fill="none" stroke="url(#fade)"/>
+  <path class="packet" d="M0 36H420L438 18H520L538 36H662L680 54H762L780 36H1200" fill="none" stroke="#6ee7b7" stroke-width="2" stroke-linecap="round" stroke-dasharray="24 1176"/>
+  <path d="M568 36L600 4L632 36L600 68Z" fill="#06130e" stroke="#22583f"/>
+  <path class="core" d="M586 36L600 22L614 36L600 50Z" fill="none" stroke="#6ee7b7" stroke-width="2"/>
+  <circle cx="600" cy="36" r="3" fill="#a7f3d0"/>
+</svg>
