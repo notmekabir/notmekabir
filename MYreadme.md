@@ -5,9 +5,6 @@
   <img src="https://raw.githubusercontent.com/notmekabir/notmekabir/main/assets/light_mode.svg" alt="Abhishek Kabiraj cyberpunk developer profile card" />
 </picture>
 
-<picture>
-  <img src="assets/matrix-portrait.png" width="360" alt="Matrix-style ASCII portrait" />
-</picture>
 
 <br />
 
