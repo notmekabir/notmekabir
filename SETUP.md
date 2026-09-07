@@ -1,70 +1,82 @@
-# Fully fixed GitHub profile package
+# Dynamic SVG GitHub Profile
 
-## Upload everything at once
+This is the SVG version you asked for.
 
-This package is designed for your special profile repository:
+## Upload everything
+
+Upload the entire contents of this package into:
 
 `notmekabir/notmekabir`
 
-Upload **everything inside this folder** to the repository root and commit it to `main`.
+on the `main` branch.
 
-The README uses only repository-local PNG files:
-
-```text
-assets/profile-dark.png
-assets/profile-light.png
-```
-
-This deliberately avoids the SVG rendering problem you were seeing.
-
-The supplied Matrix portrait is stored at:
-
-```text
-assets/matrix-portrait.png
-```
-
-and is built into the profile card image by `generate_profile.py`.
-
-## Required repository structure
+### Repository structure
 
 ```text
 notmekabir/
 ├── README.md
 ├── MYreadme.md
-├── generate_profile.py
-├── requirements.txt
 ├── SETUP.md
+├── requirements.txt
+├── update_profile.py
 ├── assets/
-│   ├── matrix-portrait.png
-│   ├── profile-dark.png
-│   └── profile-light.png
+│   ├── dark_mode.svg
+│   ├── light_mode.svg
+│   └── matrix-portrait.png
 └── .github/
     └── workflows/
         └── update-profile.yml
 ```
 
-## After upload
+## What is dynamic?
 
-1. Open **Actions**.
-2. Select **Update profile card**.
-3. Click **Run workflow**.
-4. Wait for it to finish.
-5. Open your profile and press `Ctrl + F5`.
+The SVG is regenerated from GitHub data. The workflow updates:
 
-The first upload already contains working PNG cards with placeholder telemetry. The Action replaces the placeholder numbers with live GitHub data.
+- repository count
+- stars
+- followers
+- following
+- contributions during the last 365 days
+- last synchronization time
 
-## No personal access token
+The workflow runs daily and can also be started manually.
 
-The workflow uses GitHub's built-in:
+The SVG animation is separate from the telemetry update: Matrix rain, scanlines, glow, and cursor effects are encoded in the SVG itself.
 
-```text
-GITHUB_TOKEN
+## Important change from the previous version
+
+The README uses **relative repository paths**:
+
+```html
+<source media="(prefers-color-scheme: dark)" srcset="./assets/dark_mode.svg">
+<img src="./assets/light_mode.svg">
 ```
 
-No PAT is required.
+The portrait is embedded directly into the SVG as base64 image data. Nothing inside the SVG needs to fetch the portrait from another server.
 
-## Important
+GitHub documents relative image paths in rendered README files as supported and resolves them against the current branch. 
 
-Do not delete `profile-dark.png` or `profile-light.png` after the first upload. They are the files the README actually displays.
+## GitHub Actions permissions
 
-The old `dark_mode.svg` and `light_mode.svg` are intentionally not used anymore.
+The workflow declares:
+
+```yaml
+permissions:
+  contents: write
+```
+
+This is required because the workflow updates the SVG files in the repository. GitHub documents that `GITHUB_TOKEN` permissions can be set with the workflow `permissions` key.
+
+## After uploading
+
+Go to:
+
+**Actions → Update dynamic SVG profile → Run workflow**
+
+Wait for the workflow to finish, then open:
+
+`https://github.com/notmekabir`
+
+and refresh with `Ctrl + F5`.
+
+If GitHub shows an old image temporarily, wait a little for the cached image to refresh after the commit.

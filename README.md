@@ -1,18 +1,14 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/profile-dark.png">
-  <img src="./assets/profile-light.png" alt="Abhishek Kabiraj cyberpunk Matrix developer profile card" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/dark_mode.svg">
+  <img src="./assets/light_mode.svg" alt="Abhishek Kabiraj dynamic Matrix developer profile card" width="100%">
 </picture>
 
 <br>
 
-<a href="https://github.com/notmekabir">
-<img src="https://img.shields.io/badge/@notmekabir-07120F?style=for-the-badge&logo=github&logoColor=35F2A3" alt="@notmekabir">
-</a>
-<a href="https://github.com/notmekabir?tab=repositories">
-<img src="https://img.shields.io/badge/EXPLORE_REPOSITORIES-07120F?style=for-the-badge&logo=git&logoColor=58D8FF" alt="Explore repositories">
-</a>
+<a href="https://github.com/notmekabir"><img src="https://img.shields.io/badge/@notmekabir-07120F?style=for-the-badge&logo=github&logoColor=35F2A3" alt="@notmekabir"></a>
+<a href="https://github.com/notmekabir?tab=repositories"><img src="https://img.shields.io/badge/EXPLORE_REPOSITORIES-07120F?style=for-the-badge&logo=git&logoColor=58D8FF" alt="Explore repositories"></a>
 
 ### `im a developer and i build when i need`
 
@@ -98,15 +94,9 @@ WORKFLOW   Git · GitHub · VS Code
 
 ## Activity
 
-The profile card is generated from GitHub API data and refreshed automatically with GitHub Actions.
+The profile card above is a **real dynamic SVG**.
 
-It tracks:
-
-- public repositories
-- repository stars
-- followers and following
-- contributions over the last 365 days
-- last synchronization time
+GitHub Actions runs the generator on a schedule, queries GitHub, and rewrites the numbers inside `dark_mode.svg` and `light_mode.svg`. The SVG also contains CSS-based Matrix animation and the supplied portrait as embedded image data, so the README does not depend on a second remote image request.
 
 ## Principles
 

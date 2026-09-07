@@ -1,19 +1,14 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/notmekabir/notmekabir/main/assets/dark_mode.svg">
-  <img src="https://raw.githubusercontent.com/notmekabir/notmekabir/main/assets/light_mode.svg" alt="Abhishek Kabiraj cyberpunk developer profile card" />
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/dark_mode.svg">
+  <img src="./assets/light_mode.svg" alt="Abhishek Kabiraj dynamic Matrix developer profile card" width="100%">
 </picture>
 
+<br>
 
-<br />
-
-<a href="https://github.com/notmekabir">
-  <img src="https://img.shields.io/badge/@notmekabir-07120F?style=for-the-badge&logo=github&logoColor=35F2A3" alt="@notmekabir" />
-</a>
-<a href="https://github.com/notmekabir?tab=repositories">
-  <img src="https://img.shields.io/badge/EXPLORE_REPOSITORIES-07120F?style=for-the-badge&logo=git&logoColor=58D8FF" alt="Explore repositories" />
-</a>
+<a href="https://github.com/notmekabir"><img src="https://img.shields.io/badge/@notmekabir-07120F?style=for-the-badge&logo=github&logoColor=35F2A3" alt="@notmekabir"></a>
+<a href="https://github.com/notmekabir?tab=repositories"><img src="https://img.shields.io/badge/EXPLORE_REPOSITORIES-07120F?style=for-the-badge&logo=git&logoColor=58D8FF" alt="Explore repositories"></a>
 
 ### `im a developer and i build when i need`
 
@@ -77,49 +72,31 @@ Build focused software around real needs instead of forcing every idea into a te
 ## Build loop
 
 ```text
-  DISCOVER          BUILD             UNDERSTAND        REFINE
-  The real need  →  A small version → Why it works    →  Make it better
+DISCOVER  →  BUILD  →  UNDERSTAND  →  REFINE
+problem      prototype   why it works    make it better
 ```
-
-**Think independently.** Start with the problem, not someone else's implementation.
-
-**Learn through making.** Build, break, debug, then explain it in your own words.
-
-**Reuse deliberately.** Use established tools when they fit, not because they're fashionable.
-
-**Keep it focused.** Useful, clear, and maintainable beats complicated for its own sake.
 
 ## Toolchain
 
 ```text
-  FRONTEND       HTML · CSS · JavaScript
-  BACKEND        Python · APIs · server-side logic
-  SYSTEMS        C++ · automation · custom tooling
-  WORKFLOW       Git · GitHub · VS Code
+FRONTEND   HTML · CSS · JavaScript
+BACKEND    Python · APIs · server-side logic
+SYSTEMS    C++ · automation · custom tooling
+WORKFLOW   Git · GitHub · VS Code
 ```
 
 ## Projects
 
-The interesting part is not collecting technologies. It's using them to turn a real problem into something that works.
-
-Current direction:
-
 - Full-stack applications
 - Custom developer utilities
 - Browser tooling and automation
-- Software experiments that start small and grow through iteration
+- Software experiments built through iteration
 
 ## Activity
 
-The profile card above is generated from GitHub data and refreshed automatically by GitHub Actions.
+The profile card above is a **real dynamic SVG**.
 
-It tracks:
-
-- public repositories
-- repository stars
-- followers and following
-- contributions over the last 365 days
-- last synchronization time
+GitHub Actions runs the generator on a schedule, queries GitHub, and rewrites the numbers inside `dark_mode.svg` and `light_mode.svg`. The SVG also contains CSS-based Matrix animation and the supplied portrait as embedded image data, so the README does not depend on a second remote image request.
 
 ## Principles
 

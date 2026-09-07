@@ -1,28 +1,21 @@
-#!/usr/bin/env python3
-"""
-Update the dynamic SVG profile card for @notmekabir.
-
-Uses GitHub GraphQL with the Actions-provided GITHUB_TOKEN.
-No personal access token is required.
-"""
-
-from datetime import datetime, timedelta, timezone
-from pathlib import Path
+from __future__ import annotations
 import os
 import re
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
+
 import requests
 
-USERNAME = os.environ.get("USER_NAME", "notmekabir")
-TOKEN = os.environ["GITHUB_TOKEN"]
 ROOT = Path(__file__).resolve().parent
+USERNAME = os.getenv("USER_NAME", "notmekabir")
+TOKEN = os.environ["GITHUB_TOKEN"]
 
 QUERY = """
-query($login:String!, $from:DateTime!, $to:DateTime!, $cursor:String) {
+query($login:String!, $from:DateTime!, $to:DateTime!) {
   user(login:$login) {
-    repositories(first:100, after:$cursor, ownerAffiliations:OWNER, privacy:PUBLIC) {
+    repositories(first:100, ownerAffiliations:OWNER, privacy:PUBLIC) {
       totalCount
       nodes { stargazerCount }
-      pageInfo { hasNextPage endCursor }
     }
     followers { totalCount }
     following { totalCount }
@@ -33,75 +26,61 @@ query($login:String!, $from:DateTime!, $to:DateTime!, $cursor:String) {
 }
 """
 
-def github(query, variables):
-    r = requests.post(
+def get_stats():
+    now = datetime.now(timezone.utc)
+    start = now - timedelta(days=365)
+
+    response = requests.post(
         "https://api.github.com/graphql",
-        json={"query": query, "variables": variables},
-        headers={"Authorization": f"Bearer {TOKEN}"},
+        headers={
+            "Authorization": f"Bearer {TOKEN}",
+            "Accept": "application/json",
+        },
+        json={
+            "query": QUERY,
+            "variables": {
+                "login": USERNAME,
+                "from": start.isoformat(),
+                "to": now.isoformat(),
+            },
+        },
         timeout=30,
     )
-    r.raise_for_status()
-    data = r.json()
-    if "errors" in data:
-        raise RuntimeError(data["errors"])
-    return data["data"]
+    response.raise_for_status()
+    payload = response.json()
 
-def fetch_stats():
-    now = datetime.now(timezone.utc)
-    year_ago = now - timedelta(days=365)
-    cursor = None
-    repos = 0
-    stars = 0
-    first = True
-    followers = following = contributions = 0
+    if payload.get("errors"):
+        raise RuntimeError(payload["errors"])
 
-    while first or cursor:
-        first = False
-        data = github(QUERY, {
-            "login": USERNAME,
-            "from": year_ago.isoformat(),
-            "to": now.isoformat(),
-            "cursor": cursor,
-        })["user"]
-
-        if not repos:
-            followers = data["followers"]["totalCount"]
-            following = data["following"]["totalCount"]
-            contributions = data["contributionsCollection"]["contributionCalendar"]["totalContributions"]
-
-        page = data["repositories"]
-        repos += len(page["nodes"])
-        stars += sum(node["stargazerCount"] for node in page["nodes"])
-
-        if page["pageInfo"]["hasNextPage"]:
-            cursor = page["pageInfo"]["endCursor"]
-        else:
-            cursor = None
+    user = payload["data"]["user"]
 
     return {
-        "repo_data": repos,
-        "star_data": stars,
-        "follower_data": followers,
-        "following_data": following,
-        "contrib_data": contributions,
+        "repo_data": user["repositories"]["totalCount"],
+        "star_data": sum(n["stargazerCount"] for n in user["repositories"]["nodes"]),
+        "follower_data": user["followers"]["totalCount"],
+        "following_data": user["following"]["totalCount"],
+        "contrib_data": user["contributionsCollection"]["contributionCalendar"]["totalContributions"],
         "sync_data": now.strftime("%Y-%m-%d %H:%M UTC"),
     }
 
-def replace_id(svg, element_id, value):
-    pattern = rf'(<(?:text|tspan)[^>]*\bid="{re.escape(element_id)}"[^>]*>)(.*?)(</(?:text|tspan)>)'
-    new_svg, count = re.subn(pattern, rf'\1{value}\3', svg, count=1, flags=re.S)
+def replace_text(svg, element_id, value):
+    pattern = re.compile(
+        rf'(<text\b[^>]*\bid="{re.escape(element_id)}"[^>]*>)(.*?)(</text>)',
+        flags=re.DOTALL,
+    )
+    updated, count = pattern.subn(rf'\g<1>{value}\g<3>', svg, count=1)
     if count != 1:
-        raise RuntimeError(f"Could not find SVG element: {element_id}")
-    return new_svg
+        raise RuntimeError(f"SVG element not found: {element_id}")
+    return updated
 
-def update_file(path, stats):
+def update_svg(path, values):
     svg = path.read_text(encoding="utf-8")
-    for key, value in stats.items():
-        svg = replace_id(svg, key, str(value))
+    for key, value in values.items():
+        svg = replace_text(svg, key, str(value))
     path.write_text(svg, encoding="utf-8")
 
 if __name__ == "__main__":
-    stats = fetch_stats()
+    values = get_stats()
     for filename in ("assets/dark_mode.svg", "assets/light_mode.svg"):
-        update_file(ROOT / filename, stats)
-    print("Updated profile SVGs:", stats)
+        update_svg(ROOT / filename, values)
+    print("Updated SVG telemetry:", values)
