@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Abhishek Kabiraj — cyberpunk developer terminal</title>
+  <desc id="desc">Animated Matrix rain, ASCII portrait, terminal-style developer profile and dynamic GitHub statistics for notmekabir.</desc>
+
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#030907"/>
+      <stop offset="55%" stop-color="#07120f"/>
+      <stop offset="100%" stop-color="#030907"/>
+    </linearGradient>
+    <linearGradient id="scan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#35f2a3" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#35f2a3" stop-opacity=".65"/>
+      <stop offset="100%" stop-color="#35f2a3" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="greenGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="matrixClip"><rect x="16" y="78" width="392" height="500" rx="12"/></clipPath>
+    <style>
+      @font-face {
+        src: local('Consolas'), local('Cascadia Mono'), local('Courier New');
+        font-family: 'Terminal';
+        font-display: swap;
+      }
+      text, tspan { font-family: Terminal, Consolas, monospace; white-space: pre; }
+      .key { fill: #35f2a3; }
+      .value { fill: #d7fff0; }
+      .muted { fill: #557a6d; }
+      .cyan { fill: #58d8ff; }
+      .purple { fill: #b38cff; }
+      .red { fill: #ff667a; }
+      .portrait { fill: #d7fff0; font-size: 16px; }
+      .rain { fill: #35f2a3; opacity: .16; font-size: 15px; writing-mode: vertical-rl; animation: fall linear infinite; }
+      .rain:nth-of-type(3n) { opacity: .28; }
+      .rain:nth-of-type(5n) { fill: #58d8ff; opacity: .18; }
+      .blink { animation: blink 1s steps(1,end) infinite; }
+      .pulse { animation: pulse 2.8s ease-in-out infinite; }
+      .scanline { animation: scan 4.5s linear infinite; }
+      @keyframes fall {
+        from { transform: translateY(-250px); }
+        to { transform: translateY(820px); }
+      }
+      @keyframes blink { 0%,48% { opacity:1; } 49%,100% { opacity:0; } }
+      @keyframes pulse { 0%,100% { opacity:.65; } 50% { opacity:1; } }
+      @keyframes scan {
+        0% { transform:translateY(80px); opacity:0; }
+        12% { opacity:.8; }
+        90% { opacity:.8; }
+        100% { transform:translateY(560px); opacity:0; }
+      }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="620" rx="18" fill="url(#bgGrad)" stroke="#16372d" stroke-width="2"/>
+  <rect x="8" y="8" width="1184" height="604" rx="14" fill="none" stroke="#35f2a3" stroke-opacity=".24"/>
+
+  <!-- Matrix rain layer -->
+  <g clip-path="url(#matrixClip)"><text class="rain" x="18" y="-20" style="animation-delay:-0.00s;animation-duration:4s">0エケセV>0</text>
+<text class="rain" x="64" y="-20" style="animation-delay:-0.63s;animation-duration:5s">イキシXM{イキシXM{イキ</text>
+<text class="rain" x="110" y="-20" style="animation-delay:-1.26s;animation-duration:6s">オコソB[1オコ</text>
+<text class="rain" x="156" y="-20" style="animation-delay:-1.89s;animation-duration:7s">クスC&lt;}ウクスC&lt;}ウクスC</text>
+<text class="rain" x="202" y="-20" style="animation-delay:-2.52s;animation-duration:8s">サZN]アカサZN</text>
+<text class="rain" x="248" y="-20" style="animation-delay:-3.15s;animation-duration:4s">セV>0エケセV>0エケセV>0</text>
+<text class="rain" x="294" y="-20" style="animation-delay:-3.78s;animation-duration:5s">XM{イキシXM{イ</text>
+<text class="rain" x="340" y="-20" style="animation-delay:-4.41s;animation-duration:6s">B[1オコソB[1オコソB[1オコ</text>
+<text class="rain" x="386" y="-20" style="animation-delay:-5.04s;animation-duration:7s">&lt;}ウクスC&lt;}ウクス</text>
+<text class="rain" x="432" y="-20" style="animation-delay:-5.67s;animation-duration:8s">]アカサZN]アカサZN]アカサZN</text>
+<text class="rain" x="478" y="-20" style="animation-delay:-6.30s;animation-duration:4s">0エケセV>0エケセV></text>
+<text class="rain" x="524" y="-20" style="animation-delay:-6.93s;animation-duration:5s">イキシXM{イキシXM{イキシXM{イ</text>
+<text class="rain" x="570" y="-20" style="animation-delay:-7.56s;animation-duration:6s">オコソB[1オコソB[1オ</text>
+<text class="rain" x="616" y="-20" style="animation-delay:-8.19s;animation-duration:7s">クスC&lt;}ウク</text>
+<text class="rain" x="662" y="-20" style="animation-delay:-8.82s;animation-duration:8s">サZN]アカサZN]アカサZ</text>
+<text class="rain" x="708" y="-20" style="animation-delay:-9.45s;animation-duration:4s">セV>0エケセV</text>
+<text class="rain" x="754" y="-20" style="animation-delay:-10.08s;animation-duration:5s">XM{イキシXM{イキシXM{</text>
+<text class="rain" x="800" y="-20" style="animation-delay:-10.71s;animation-duration:6s">B[1オコソB[1</text>
+<text class="rain" x="846" y="-20" style="animation-delay:-11.34s;animation-duration:7s">&lt;}ウクスC&lt;}ウクスC&lt;}ウク</text>
+<text class="rain" x="892" y="-20" style="animation-delay:-11.97s;animation-duration:8s">]アカサZN]アカサ</text>
+<text class="rain" x="938" y="-20" style="animation-delay:-12.60s;animation-duration:4s">0エケセV>0エケセV>0エケセV</text>
+<text class="rain" x="984" y="-20" style="animation-delay:-13.23s;animation-duration:5s">イキシXM{イキシXM</text>
+<text class="rain" x="1030" y="-20" style="animation-delay:-13.86s;animation-duration:6s">オコソB[1オコソB[1オコソB[1</text>
+<text class="rain" x="1076" y="-20" style="animation-delay:-14.49s;animation-duration:7s">クスC&lt;}ウクスC&lt;}ウ</text></g>
+
+  <!-- Header / terminal chrome -->
+  <rect x="16" y="16" width="1168" height="46" rx="10" fill="#0b1a16" stroke="#16372d"/>
+  <circle cx="38" cy="39" r="6" fill="#ff667a"/>
+  <circle cx="58" cy="39" r="6" fill="#b38cff"/>
+  <circle cx="78" cy="39" r="6" fill="#35f2a3"/>
+  <text x="100" y="44" font-size="15" class="muted">notmekabir@github:~</text>
+  <text x="1002" y="44" font-size="13" class="cyan">PROFILE.SVG</text>
+  <text x="1124" y="44" font-size="13" class="muted">● LIVE</text>
+
+  <!-- Left visual -->
+  <rect x="16" y="78" width="392" height="500" rx="12" fill="#0b1a16" fill-opacity=".72" stroke="#16372d"/>
+  <text x="32" y="103" font-size="12" class="key">[ MATRIX_IDENTITY ]</text>
+  <line x1="32" y1="113" x2="392" y2="113" stroke="#16372d"/>
+  <g transform="translate(34,122)"><tspan x="0" y="30">           g@M%@%%@N%Nw,,                   </tspan>
+<tspan x="0" y="50">        ,M*|`||*%gNM=]mM%g||%N,             </tspan>
+<tspan x="0" y="70">       p!``  '! |''` '''|||jhlj%w           </tspan>
+<tspan x="0" y="90">     ,@L `    ,,        ''!`|j%M]%M         </tspan>
+<tspan x="0" y="110">    ]j'` .,wp@pw,    `.     ''''|%Wg       </tspan>
+<tspan x="0" y="130">  /{||]@@@@@@@@@pp.             |||||      </tspan>
+<tspan x="0" y="150"> '` ']@@@@@@@@@@@@@@p     , ,'''` `        </tspan>
+<tspan x="0" y="170">  , :]%%@@@@@%%%%%%k%h '*||mkr     *       </tspan>
+<tspan x="0" y="190">  '  j%M`      |jkk'   ~nrn=|i    ;`       </tspan>
+<tspan x="0" y="210">   !  jrr*^`             `"!  L'':!   </tspan>
+<tspan x="0" y="230">    j  lp;,.  ,/ @@    ,;\nmy "  ,~   </tspan>
+<tspan x="0" y="250">   i r @@@@mmHM @@@@ `^****M*,p ;,         </tspan>
+<tspan x="0" y="270">   | ]@@@@HHH]g@M%%%%%H,jmgpmb%  j         </tspan>
+<tspan x="0" y="290">    ;;%%%%%k%@[,.n|;.;j%%k|%k%%',[         </tspan>
+<tspan x="0" y="310">     H|%%k%%%j%k||,;;j;!!'|%ij}]@          </tspan>
+<tspan x="0" y="330">     "djjmkL,"]][,,,,wwxw;|#kjk` </tspan>
+<tspan x="0" y="350">       %;%km%%%%M%M|%%jkkii|||[            </tspan>
+<tspan x="0" y="370">        kjj%%kkkl|!||||||j|||"        </tspan>
+<tspan x="0" y="390">         |jm%H@@@b%%kkmk%i|!,[             </tspan>
+<tspan x="0" y="410">         @p|j%%%%jkk|||j*'`;j[             </tspan>
+<tspan x="0" y="430">        ]@@@g|'''`'''  ` ,;j%k             </tspan>
+<tspan x="0" y="450">        @@@@@mgmp;,,,,:;jj%%k%             </tspan>
+<tspan x="0" y="470">       @@@@@@@@%%kgki!|jjjj%k%@ .          </tspan>
+<tspan x="0" y="490">. ^['' %@@@@HH%b%k{illljkjj%%%% ; `,.      </tspan>
+<tspan x="0" y="510">=[' ` . %HH%%%%%H@gkilljjj%kk%".   `'i</tspan></g>
+  <rect x="16" y="78" width="392" height="500" rx="12" fill="none" stroke="#35f2a3" stroke-opacity=".14"/>
+  <rect class="scanline" x="20" y="78" width="384" height="2" fill="url(#scan)" opacity=".0"/>
+
+  <!-- Right terminal -->
+  <text x="432" y="103" font-size="15" class="cyan">$ whoami</text>
+  <text x="432" y="128" font-size="23" class="value pulse">Abhishek Kabiraj</text>
+  <text x="432" y="151" font-size="13" class="muted">@notmekabir · full-stack / custom software developer</text>
+
+  <line x1="432" y1="169" x2="1164" y2="169" stroke="#16372d"/>
+  <text x="432" y="195" font-size="13" class="key">SYSTEM</text>
+  <text x="432" y="221" font-size="14" class="muted">role........</text><text x="555" y="221" font-size="14" class="value">developer / builder</text>
+  <text x="432" y="245" font-size="14" class="muted">focus.......</text><text x="555" y="245" font-size="14" class="value">full-stack systems + custom tools</text>
+  <text x="432" y="269" font-size="14" class="muted">mindset.....</text><text x="555" y="269" font-size="14" class="value">understand → build → break → refine</text>
+  <text x="432" y="293" font-size="14" class="muted">principle...</text><text x="555" y="293" font-size="14" class="value">fit the tool to the problem</text>
+
+  <text x="432" y="326" font-size="13" class="key">STACK</text>
+  <text x="432" y="352" font-size="14" class="value">JavaScript · Python · C++ · HTML · CSS</text>
+  <text x="432" y="376" font-size="14" class="value">Git · GitHub · VS Code · APIs · automation</text>
+
+  <text x="432" y="410" font-size="13" class="key">GITHUB // LIVE TELEMETRY</text>
+  <text x="432" y="437" font-size="14" class="muted">repositories..</text><text id="repo_data" x="575" y="437" font-size="14" class="value">0</text>
+  <text x="700" y="437" font-size="14" class="muted">stars..</text><text id="star_data" x="780" y="437" font-size="14" class="value">0</text>
+  <text x="900" y="437" font-size="14" class="muted">followers..</text><text id="follower_data" x="1018" y="437" font-size="14" class="value">0</text>
+
+  <text x="432" y="463" font-size="14" class="muted">contributions / last year..</text>
+  <text id="contrib_data" x="680" y="463" font-size="14" class="green pulse">#35f2a3</text>
+  <text x="780" y="463" font-size="14" class="muted">following..</text><text id="following_data" x="875" y="463" font-size="14" class="value">0</text>
+
+  <text x="432" y="493" font-size="14" class="muted">last sync....</text><text id="sync_data" x="575" y="493" font-size="14" class="cyan">waiting for GitHub Actions</text>
+
+  <line x1="432" y1="518" x2="1164" y2="518" stroke="#16372d"/>
+  <text x="432" y="545" font-size="13" class="muted">$ ./build-something-useful.sh</text>
+  <text x="432" y="570" font-size="13" class="value">Original ideas. Thoughtful engineering. Software with purpose.<tspan class="blink">█</tspan></text>
+</svg>
